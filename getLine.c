@@ -1,5 +1,12 @@
 #include "shell.h"
 
+/* Declaration of functions */
+void handleSIGINT(void); // Declare handleSIGINT function
+void check_command_chain(info_t *info, char *buffer, size_t *j, size_t i, size_t length); // Declare check_command_chain function
+int is_command_chain(info_t *info, char *buffer, size_t *j); // Declare is_command_chain function
+void _concatenate_strings(char **new_p, char *buffer, size_t len); // Declare _concatenate_strings function
+void _copy_string(char **new_p, char *buffer, size_t len); // Declare _copy_string function
+
 /**
  * buffer_commands - buffers chained commands
  * @info: parameter struct
@@ -141,9 +148,9 @@ int _getline(info_t *info, char **ptr, size_t *length)
 		return (p ? (free(p), -1) : -1);
 
 	if (size)
-		_concatenate_strings(new_p, buffer + i, k - i);
+		_concatenate_strings(&new_p, buffer + i, k - i);
 	else
-		_copy_string(new_p, buffer + i, k - i + 1);
+		_copy_string(&new_p, buffer + i, k - i + 1);
 
 	size += k - i;
 	i = k;
@@ -157,11 +164,8 @@ int _getline(info_t *info, char **ptr, size_t *length)
 
 /**
  * handleSIGINT - blocks ctrl-C
- * @signal_num: the signal number
- *
- * Return: void
  */
-void handleSIGINT(__attribute__((unused))int signal_num)
+void handleSIGINT(void)
 {
 	_puts("\n");
 	_puts("$ ");
