@@ -47,13 +47,13 @@ void print_error(info_t *info, char *estr)
 }
 
 /**
- * print_d - function prints a decimal (integer) number (base 10)
+ * print_d - function prints  decimal (integer) number (base 10)
  * @input: the input
  * @fd: the filedescriptor to write to
  *
  * Return: number of characters printed
  */
-int eh_print_d(int input, int fd)
+int print_d(int input, int fd)
 {
 	int (*__putchar)(char) = _putchar;
 	int i, count = 0;
@@ -93,7 +93,7 @@ int eh_print_d(int input, int fd)
  *
  * Return: string
  */
-char *eh_convert_number(long int num, int base, int flags)
+char *convert_number(long int num, int base, int flags)
 {
 	static char *array;
 	static char buffer[50];
@@ -127,7 +127,7 @@ char *eh_convert_number(long int num, int base, int flags)
  *
  * Return: Always 0;
  */
-void eh_remove_comments(char *buf)
+void remove_comments(char *buf)
 {
 	int i;
 
