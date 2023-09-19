@@ -36,13 +36,7 @@ int remove_alias(info_t *info, char *alias)
 	return (ret);
 }
 
-/**
- * create_alias - Creates or updates an alias.
- * @info: Pointer to the info_t structure containing arguments.
- * @alias: The alias string to be created or updated.
- *
- * Return: Always 0 on success, 1 on error.
- */
+
 int create_alias(info_t *info, char *alias)
 {
 	char *equal_sign;
@@ -57,12 +51,7 @@ int create_alias(info_t *info, char *alias)
 	return (add_node_end(&(info->alias), alias, 0) == NULL);
 }
 
-/**
- * print_single_alias - Prints a single alias string.
- * @node: The alias node to be printed.
- *
- * Return: Always 0 on success, 1 on error.
- */
+
 int print_single_alias(list_t *node)
 {
 	char *sign_position = NULL, *alias_string = NULL;
@@ -80,12 +69,7 @@ int print_single_alias(list_t *node)
 	return (1);
 }
 
-/**
- * manage_alias - Manages aliases, mimicking the alias builtin (man alias).
- * @info: Pointer to the info_t structure containing arguments.
- *
- * Return: Always 0.
- */
+
 int manage_alias(info_t *info)
 {
 	int i = 0;

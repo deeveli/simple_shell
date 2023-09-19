@@ -26,12 +26,7 @@ int exit_shell(info_t *info)
 	info->err_num = -1;
 	return (-2);
 }
-/**
- * change_directory - Changes the current directory of the process.
- * @info: Pointer to the info_t structure containing arguments.
- *
- * Return: Always 0.
- */
+
 int change_directory(info_t *info)
 {
 	char *current_dir, *target_dir, buffer[1024];
@@ -75,12 +70,7 @@ int change_directory(info_t *info)
 	}
 	return (0);
 }
-/**
- * show_help - Displays help information.
- * @info: Pointer to the info_t structure containing arguments.
- *
- * Return: Always 0.
- */
+
 int show_help(info_t *info)
 {
 	char **arg_array;
@@ -88,6 +78,6 @@ int show_help(info_t *info)
 	arg_array = info->argv;
 	_puts("Help: Functionality not yet implemented\n");
 	if (0)
-		_puts(*arg_array); /* Temporary unused workaround */
+		_puts(*arg_array); 
 	return (0);
 }

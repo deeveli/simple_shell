@@ -28,12 +28,7 @@ int convert_string_to_int(char *s)
 	return (result);
 }
 
-/**
- * print_error_message - prints an error message.
- * @info: the parameter and return info struct.
- * @error_string: string containing the specified error type.
- * Return: Nothing.
- */
+
 void print_error_message(info_t *info, char *error_string)
 {
 	_eputs(info->fname);
@@ -45,13 +40,7 @@ void print_error_message(info_t *info, char *error_string)
 	_eputs(error_string);
 }
 
-/**
- * print_integer - prints a decimal (integer) number (base 10).
- * @input: the input.
- * @fd: the file descriptor to write to.
- *
- * Return: number of characters printed.
- */
+
 int print_integer(int input, int fd)
 {
 	int (*print_char_func)(char) = _putchar;
@@ -84,14 +73,7 @@ int print_integer(int input, int fd)
 	return (count);
 }
 
-/**
- * convert_number_to_string - converter function, a clone of itoa.
- * @num: number.
- * @base: base.
- * @flags: argument flags.
- *
- * Return: string.
- */
+
 char *convert_number_to_string(long int num, int base, int flags)
 {
 	static char *array;
@@ -119,12 +101,7 @@ char *convert_number_to_string(long int num, int base, int flags)
 	return (ptr);
 }
 
-/**
- * remove_comments_from_string - function replace fist instance
- * @str: address of the string to modify.
- *
- * Return: Always 0.
- */
+
 void remove_comments_from_string(char *str)
 {
 	int i;

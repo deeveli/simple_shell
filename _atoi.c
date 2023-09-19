@@ -29,23 +29,13 @@ int is_delim(char c, char *delim)
 	return (0);
 }
 
-/**
- * _isalpha - Check if a character is an alphabetic character.
- *
- * @c: The character to check.
- * Return: 1 if the character is an alphabetic character, 0 otherwise.
- */
+
 int _isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 
-/**
- * _atoi - Convert a string to an integer.
- *
- * @s: A pointer to the null-terminated string to convert.
- * Return: The converted integer value.
- */
+
 int _atoi(char *s)
 {
 	int i, sign = 1, flag = 0, output;

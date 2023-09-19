@@ -34,13 +34,7 @@ char *get_environment_variable(info_t *info, const char *name)
 	return (NULL);
 }
 
-/**
- * set_environment_variable - Initializes a new environ variable
- *                            or modifies an existing one.
- * @info: Pointer to the info_t structure containing arguments.
- *
- * Return: Always 0.
- */
+
 int set_environment_variable(info_t *info)
 {
 	if (info->argc != 3)
@@ -53,12 +47,7 @@ int set_environment_variable(info_t *info)
 	return (1);
 }
 
-/**
- * unset_environment_variable - Removes an environ variable.
- * @info: Pointer to the info_t structure containing arguments.
- *
- * Return: Always 0.
- */
+
 int unset_environment_variable(info_t *info)
 {
 	int i;
@@ -74,12 +63,7 @@ int unset_environment_variable(info_t *info)
 	return (0);
 }
 
-/**
- * populate_environment_list - Populates the environ linked list.
- * @info: Pointer to the info_t structure containing arguments.
- *
- * Return: Always 0.
- */
+
 int populate_environment_list(info_t *info)
 {
 	list_t *node = NULL;
