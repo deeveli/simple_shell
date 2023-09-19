@@ -1,11 +1,14 @@
 #include "shell.h"
 
-/* Declaration of functions */
-void handleSIGINT(void); /*Declare handleSIGINT function*/
-void check_command_chain(info_t *info, char *buffer, size_t *j, size_t i, size_t length); /* Declare check_command_chain function*/
-int is_command_chain(info_t *info, char *buffer, size_t *j); /* Declare is_command_chain function*/
-void _concatenate_strings(char **new_p, char *buffer, size_t len); /* Declare _concatenate_strings function*/
-void _copy_string(char **new_p, char *buffer, size_t len); /* Declare _copy_string function*/
+/* Function Declarations */
+void handleSIGINT(void); /* Handle Ctrl-C signal */
+void check_command_chain(info_t *info, char *buffer, size_t *j,
+		size_t i, size_t length); /* Check for command chains */
+int is_command_chain(info_t *info,
+		char *buffer, size_t *j); /* Check if a command is part of a chain */
+void _concatenate_strings(char **new_p,
+		char *buffer, size_t len); /* Concatenate strings */
+void _copy_string(char **new_p, char *buffer, size_t len); /* Copy a string */
 
 /**
  * buffer_commands - buffers chained commands
