@@ -1,4 +1,4 @@
-#include "sshell.h"
+#include "shell.h"
 
 /**
  * _erratoi - converts a string to an integer
@@ -6,7 +6,7 @@
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
  */
-int eh_erratoi(char *s)
+int _erratoi(char *s)
 {
 	int i = 0;
 	unsigned long int result = 0;
@@ -35,15 +35,15 @@ int eh_erratoi(char *s)
  * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error
  */
-void eh_print_error(arg_info *info, char *estr)
+void print_error(info_t *info, char *estr)
 {
-	eh_eputs(info->fname);
-	eh_eputs(": ");
-	eh_print_d(info->line_count, STDERR_FILENO);
-	eh_eputs(": ");
-	eh_eputs(info->argv[0]);
-	eh_eputs(": ");
-	eh_eputs(estr);
+	_eputs(info->fname);
+	_eputs(": ");
+	print_d(info->line_count, STDERR_FILENO);
+	_eputs(": ");
+	_eputs(info->argv[0]);
+	_eputs(": ");
+	_eputs(estr);
 }
 
 /**
