@@ -30,7 +30,13 @@ char *copy_string(char *destination, char *source, int num)
 	return (result);
 }
 
-
+/**
+ * concatenate_strings - concatenates two strings
+ * @destination: the first string
+ * @source: the second string
+ * @num: the number of bytes to be maximally used
+ * Return: the pointer to the concatenated string
+ */
 char *concatenate_strings(char *destination, char *source, int num)
 {
 	int i, j;
@@ -51,7 +57,12 @@ char *concatenate_strings(char *destination, char *source, int num)
 	return (result);
 }
 
-
+/**
+ * locate_character - locates a character in a string
+ * @string: the string to be parsed
+ * @character: the character to look for
+ * Return: a pointer to the memory area containing the character
+ */
 char *locate_character(char *string, char character)
 {
 	do {

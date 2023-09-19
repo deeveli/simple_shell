@@ -49,7 +49,15 @@ int unset_environment_variable(info_t *info, char *variable)
 	return (info->env_changed);
 }
 
-
+/**
+ * set_environment_variable - Initialize a new environ variable,
+ *                            or modify an existing one
+ * @info: Structure containing potential arguments. Used to maintain
+ *        constant function prototype.
+ * @variable: the environ variable name
+ * @value: the environ variable value
+ * Return: 0 on success, 1 on failure
+ */
 int set_environment_variable(info_t *info, char *variable, char *value)
 {
 	char *buffer = NULL;
